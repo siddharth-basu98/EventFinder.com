@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { RegionDropdown } from "react-country-region-selector";
 import img_src from "../../Images/Event-placeholder-image.png" ; 
+import { getToken } from "../../Utils/Common"
 
 
 export default class EventList extends Component {
@@ -32,7 +33,7 @@ export default class EventList extends Component {
   }
 
   deleteEvent(id) {
-    console.log(id);
+    console.log(getToken());
     axios
       .delete(`http://localhost:4000/event/${id}`)
       .then((result) => {
@@ -79,7 +80,7 @@ export default class EventList extends Component {
 
     if(val==="date"){
       let event_list_sorted = this.state.events ; 
-      event_list_sorted = this.state.events.sort((a,b) => b.startDate.localeCompare(a.startDate));
+      event_list_sorted = this.state.events.sort((a,b) => a.startDate.localeCompare(b.startDate));
       this.setState({sort_by:"date", events:event_list_sorted})
     }
 

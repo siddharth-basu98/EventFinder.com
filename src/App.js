@@ -14,9 +14,6 @@ import EventEdit from './Components/Event/EventEdit';
 import EventList from './Components/Event/EventList';
 import EventDetail from './Components/Event/EventDetails';
 
-
-
-
 function App() {
   const [authLoading, setAuthLoading] = useState(true);
 

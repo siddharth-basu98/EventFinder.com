@@ -191,7 +191,7 @@ export default class EventEdit extends Component {
 
     return (
       <div className="container">
-        <h1 className="display-3">Add Event</h1>
+        <h1 className="display-3">Update Event</h1>
         <p className="lead" style={{ fontSize: 15 }}>
           Simple Add Event page
         </p>
