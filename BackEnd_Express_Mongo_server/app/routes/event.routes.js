@@ -23,4 +23,6 @@ module.exports = (app) => {
   app.get("/event/location/:location", events.findByLocation);
 
   app.get("/event/organizer/:organizerName", events.findByOrganizer);
+
+  // app.get("/init", events.initialise) ; 
 };

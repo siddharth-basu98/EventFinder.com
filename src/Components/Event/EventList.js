@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { RegionDropdown } from "react-country-region-selector";
 import img_src from "../../Images/Event-placeholder-image.png" ; 
-import { getToken } from "../../Utils/Common"
+import { getToken, getUser } from "../../Utils/Common"
 import Header from "../Header"
 
 export default class EventList extends Component {
@@ -84,8 +84,6 @@ export default class EventList extends Component {
       this.setState({sort_by:"date", events:event_list_sorted})
     }
 
-
-
   }
 
 
@@ -130,10 +128,13 @@ export default class EventList extends Component {
       <div className="container-fluid">
         <Header />
 
+
+
       <div className="container" style={{marginBottom:100}}>
 
         <h1 style={{fontSize:100, paddingTop:15}}>Events</h1>
         <br />
+      
         <Link
           to="/event-add"
           className="btn btn-success btn-lg btn-block"
@@ -145,20 +146,20 @@ export default class EventList extends Component {
         <br />
 
       
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                  <span style={{fontSize:40}} class="glyphicon glyphicon-search"></span>
+        <div className="input-group mb-3">
+            <div className="input-group-prepend">
+                  <span style={{fontSize:40}} className="glyphicon glyphicon-search"></span>
                   &nbsp; &nbsp; &nbsp; &nbsp;
             </div>
-            <div class="btn-group">
-                  <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div className="btn-group">
+                  <button type="button" className="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <b>Search by {this.state.search_by}. <br/>(Click dropdown to change)</b>
                   </button>
-                      <div class="dropdown-menu">
-                        <li class="dropdown-item" style={{fontSize:14}} onClick={()=>{this.setState({search_by:"title", events:this.state.all_events, search:""})}}>Title</li>
-                        <li class="dropdown-item" style={{fontSize:14}} onClick={()=>{this.setState({search_by:"domain", events:this.state.all_events, search:""})}}>Domain</li>
-                        <li class="dropdown-item" style={{fontSize:14}} onClick={()=>{this.setState({search_by:"location", events:this.state.all_events, search:""})}}>Location</li>
-                        <li class="dropdown-item" style={{fontSize:14}} onClick={()=>{this.setState({search_by:"startDate", events:this.state.all_events, search:""})}}>Date</li>
+                      <div className="dropdown-menu">
+                        <li className="dropdown-item" style={{fontSize:14}} onClick={()=>{this.setState({search_by:"title", events:this.state.all_events, search:"", sort_by:""})}}>Title</li>
+                        <li className="dropdown-item" style={{fontSize:14}} onClick={()=>{this.setState({search_by:"domain", events:this.state.all_events, search:"", sort_by:""})}}>Domain</li>
+                        <li className="dropdown-item" style={{fontSize:14}} onClick={()=>{this.setState({search_by:"location", events:this.state.all_events, search:"", sort_by:""})}}>Location</li>
+                        <li className="dropdown-item" style={{fontSize:14}} onClick={()=>{this.setState({search_by:"startDate", events:this.state.all_events, search:"", sort_by:""})}}>Date</li>
                       </div>
             </div>
 
@@ -171,15 +172,15 @@ export default class EventList extends Component {
             <br /> 
             <br />
 
-            <div class="input-group mb-3">
-            <div class="btn-group">
-                  <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div className="input-group mb-3">
+            <div className="btn-group">
+                  <button type="button" className="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <b>Sort results by {this.state.sort_by} <br/>(Click dropdown to change)</b>
                   </button>
-                      <div class="dropdown-menu">
-                        <li class="dropdown-item" style={{fontSize:14}} data-id="price-asc" onClick={this.handleSort}>Price (low to high)</li>
-                        <li class="dropdown-item" style={{fontSize:14}} data-id="price-desc" onClick={this.handleSort}>Price (high to low)</li>
-                        <li class="dropdown-item" style={{fontSize:14}} data-id="date" onClick={this.handleSort}>Date</li>
+                      <div className="dropdown-menu">
+                        <li className="dropdown-item" style={{fontSize:14}} data-id="price-asc" onClick={this.handleSort}>Price (low to high)</li>
+                        <li className="dropdown-item" style={{fontSize:14}} data-id="price-desc" onClick={this.handleSort}>Price (high to low)</li>
+                        <li className="dropdown-item" style={{fontSize:14}} data-id="date" onClick={this.handleSort}>Date</li>
                       </div>
             </div>
             <div>
@@ -187,32 +188,32 @@ export default class EventList extends Component {
             &nbsp; &nbsp;
             &nbsp; &nbsp;
 
-            <button type="button" class="btn btn-danger btn-lg" onClick={()=>{this.setState({sort_by:"", search:"", events:this.state.all_events})}}>
+            <button type="button" className="btn btn-danger btn-lg" onClick={()=>{this.setState({sort_by:"", search:"", events:this.state.all_events})}}>
                         <b>Clear Search and Sort Filters<br/>(return back to original list)</b>
                   </button></div>
             </div>
 
 
 
-    <div class="container">
-    <div class="row equal">
+    <div className="container">
+    <div className="row equal">
 
         {
           this.state.events.map((listValue, index) => {
             return (
-              <div class="col-sm-4 d-flex pb-3">
-                <div class="card" style={{marginBottom:40, marginTop:40}}>
-                <img src={img_src} class="card-img-top img-thumbnail" alt="..."/>
-                <div class="card-body">
-            <h5 class="card-title display-4">{listValue.title}</h5>
+              <div className="col-sm-4 d-flex pb-3" key={index}>
+                <div className="card" style={{marginBottom:40, marginTop:40}}>
+                <img src={img_src} className="card-img-top img-thumbnail" alt="..."/>
+                <div className="card-body">
+            <h5 className="card-title display-4">{listValue.title}</h5>
             <h3>Location: {listValue.location}</h3>
             <h3>Domain: {listValue.domain}</h3>
             <h3>Price: {listValue.price}</h3>
 
-            <p class="card-text">{listValue.description.length > 200 ? listValue.description.substring(0,200)+"...." : listValue.description}</p>
+            <p className="card-text">{listValue.description.length > 200 ? listValue.description.substring(0,200)+"...." : listValue.description}</p>
             
                 </div>
-                <div class="card-footer" style={{backgroundColor:"white",}}>
+                <div className="card-footer" style={{backgroundColor:"white",}}>
             <Link
                       to={`/event-detail/${listValue._id}`}
                       className="btn btn-primary btn-lg"
@@ -234,7 +235,7 @@ export default class EventList extends Component {
                       Delete
                     </button>
                     </div>
-                <div class="card-footer" style={{backgroundColor:"black",}}>
+                <div className="card-footer" style={{backgroundColor:"black",}}>
             <h4 style={{color:"white",}}>Date : {listValue.startDate}</h4>
                 </div>
                 </div>

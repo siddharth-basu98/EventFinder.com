@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { getUser, removeUserSession } from "../Utils/Common";
+import axios from "axios" ; 
 
 export default class Header extends Component {
 
@@ -21,7 +22,21 @@ export default class Header extends Component {
     }
   }
 
+  handleLoad = () => {
+    axios
+      .get(`http://localhost:4000/init`)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log("There is some error in loading the initial data");
+      });
+  }
+
   render() {
+
+    let a = getUser() ; 
+    console.log(a) ; 
 
 
     return (
@@ -29,7 +44,7 @@ export default class Header extends Component {
         <div className="container-fluid">
           <ul className="nav navbar-nav">
             <li className="nav-item" style={{ fontSize: 20, color:"white" }}>
-              <Link to="/">Application</Link>
+              <Link to="/">FindMyEvents.com</Link>
             </li>
 
             <li className="nav-item" style={{ fontSize: 20 }}>
@@ -41,11 +56,21 @@ export default class Header extends Component {
 
 
             {
-              (getUser()==null) ? (<li className="nav-item" style={{ fontSize: 20 }}>
+              (a==null) ? (<li className="nav-item" style={{ fontSize: 20 }}>
               <Link to="/login">Login</Link>
-             </li> ) : (<li className="nav-item" style={{ fontSize: 20 }}>
+             </li> ) : <li className="nav-item" style={{ fontSize: 20 }}>
               <Link to="/" onClick={this.handleLogout}>Logout</Link>
-            </li>  )
+            </li> 
+            }
+
+            {(a!=null) ? (<li className="nav-item" style={{ fontSize: 20 }}>
+            <Link>Hello {a.name}!</Link>
+            </li>) : (<li></li>)}
+
+            {
+              (a==null) ? (<li className="nav-item" style={{ fontSize: 20 }}>
+              <Link onClick={this.handleLoad}>Load initial data (For prototype demo purposes)</Link>
+             </li> ) : (<span></span>)
             }
 
           </ul>

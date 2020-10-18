@@ -253,3 +253,59 @@ exports.findByOrganizer = (req, res) => {
       });
     });
 };
+
+// exports.initialise = (req, res) => {
+
+//   const event1 = new Event({
+//     title: "IPL Party",
+//     domain: "Sports",
+//     price: 2500,
+//     location: "Maharashtra",
+//     startDate: "2020-10-21",
+//     endDate: "2020-10-22",
+//     photoPath: "www.demo_path.jpeg",
+//     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+//     organizerName: "91 Events",
+//   });
+
+//   const event2 = new Event({
+//     title: "ZomatoLand",
+//     domain: "Culinary",
+//     price: 1900,
+//     location: "Delhi",
+//     startDate: "2020-11-19",
+//     endDate: "2020-11-20",
+//     photoPath: "www.demo_path.jpeg",
+//     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+//     organizerName: "Zomato",
+//   });
+
+//   const event3 = new Event({
+//     title: "Coldplay Live",
+//     domain: "Music Concerts",
+//     price: 4500,
+//     location: "Goa",
+//     startDate: "2021-01-10",
+//     endDate: "2021-01-11",
+//     photoPath: "www.demo_path.jpeg",
+//     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+//     organizerName: "Coldplay",
+//   });
+
+//   event1
+//     .save()
+//     .then((data) => {
+//       res.send(data);
+//     })
+//     .catch((err) => {
+//       res.status(500).send({
+//         message:
+//           err.message || "Some error occurred while creating the Event.",
+//       });
+//     });
+
+//   // event1.save() ; 
+//   // event2.save() ; 
+//   // event3.save() ; 
+
+// }

@@ -10,15 +10,15 @@ export default class EventEdit extends Component {
     super(props);
     this.state = {
         event: {},
-      title: null,
-      domain: null,
-      price: null,
+      title: "",
+      domain: "",
+      price: "",
       location: "",
-      startDate: null,
-      photoPath: null,
-      endDate: null,
-      description: null,
-      organizerName: null,
+      startDate: "",
+      photoPath: "",
+      endDate: "",
+      description: "",
+      organizerName: "",
       EventError: {
         title: "",
         domain: "",
@@ -193,7 +193,7 @@ export default class EventEdit extends Component {
     return (
       <div className="container-fluid">
         <Header />
-      <div className="container">
+      <div className="container" style={{marginBottom:100, marginTop:50}}>
         <h1 className="display-3">Update Event</h1>
         <p className="lead" style={{ fontSize: 15 }}>
           Simple Add Event page

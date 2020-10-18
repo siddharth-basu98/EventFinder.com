@@ -176,7 +176,7 @@ export default class EventAdd extends Component {
       <div className="container-fluid">
         <Header />
 
-      <div className="container" style={{marginBottom:100}}>
+      <div className="container" style={{marginBottom:100, marginTop:50}}>
         <h1 className="display-3">Add Event</h1>
         <p className="lead" style={{ fontSize: 15 }}>
           Simple Add Event page

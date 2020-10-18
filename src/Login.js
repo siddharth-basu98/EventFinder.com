@@ -45,17 +45,17 @@ class Login extends React.Component {
 <div className="container-fluid">
   <Header />
       <div className="container" id="sign_body">
-    <form class="form-signin">
-      <img class="center-image" src={img_src} alt="" />
-      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-      <label htmlFor="inputUsername" class="sr-only">Username</label>
+    <form className="form-signin">
+      <img className="center-image" src={img_src} alt="" />
+      <h1 className="h3 mb-3 font-weight-normal">To see all events, please sign in first</h1>
+      <label htmlFor="inputUsername" className="sr-only">Username</label>
       <input type="text" name="username" onChange={this.handleChange} value={this.state.username} autoComplete="new-password"
-      id="inputEmail" class="form-control" placeholder="Username" required autofocus />
+      id="inputEmail" className="form-control" placeholder="Username" required autoFocus />
       <br />
-      <label htmlFor="inputPassword" class="sr-only">Password</label>
+      <label htmlFor="inputPassword" className="sr-only">Password</label>
 
       <input type="password" name="password" onChange= {this.handleChange} value={this.state.password} autoComplete="new-password" 
-      id="inputPassword" class="form-control" placeholder="Password" required />
+      id="inputPassword" className="form-control" placeholder="Password" required />
 
 
           {this.state.error && (
@@ -64,11 +64,11 @@ class Login extends React.Component {
 
 
      
-      <button class="btn btn-lg btn-primary btn-block" type="submit" style={{padding:10}}
+      <button className="btn btn-lg btn-primary btn-block" type="submit" style={{padding:10}}
       value="Login" onClick={this.handleLogin}>
         <h3>Sign in</h3>
         </button>
-      <p class="mt-5 mb-3 text-muted">&copy; 2020-2021</p>
+      <p className="mt-5 mb-3 text-muted">&copy; 2020-2021</p>
     </form>
       </div>
       </div>

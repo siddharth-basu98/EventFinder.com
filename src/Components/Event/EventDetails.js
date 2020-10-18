@@ -45,26 +45,26 @@ export default class EventDetail extends Component {
         <Header />
 
       <div className="container">
-<div class="card mb-3">
-  <img class="card-img-top" src={img_src} alt="Card image cap" />
-  <div class="card-body">
-    <h2 class="card-title display-2">{this.state.event.title}</h2>
+<div className="card mb-3">
+  <img className="card-img-top" src={img_src} alt="Card image cap" />
+  <div className="card-body">
+    <h2 className="card-title display-2">{this.state.event.title}</h2>
     <hr/>
-    <blockquote class="card-text">{this.state.event.description}</blockquote>
+    <blockquote className="card-text">{this.state.event.description}</blockquote>
     <br />
     <br />
 
 
-    <div class="list-group" style={{fontSize:16}}>
-  <button type="button" class="list-group-item list-group-item-action active">
+    <div className="list-group" style={{fontSize:16}}>
+  <button type="button" className="list-group-item list-group-item-action active">
     Details
   </button>
-  <button type="button" class="list-group-item list-group-item-action"><strong>Domain :</strong> {this.state.event.domain}</button>
-  <button type="button" class="list-group-item list-group-item-action"><strong>Price : </strong>{this.state.event.price}</button>
-  <button type="button" class="list-group-item list-group-item-action"><strong>Location : </strong>{this.state.event.location}</button>
-  <button type="button" class="list-group-item list-group-item-action"><strong>Start Date : </strong>{this.state.event.startDate}</button>
-  <button type="button" class="list-group-item list-group-item-action"><strong>End Date : </strong>{this.state.event.endDate}</button>
-  <button type="button" class="list-group-item list-group-item-action"><strong>Organizer Name : </strong>{this.state.event.organizerName}</button>
+  <button type="button" className="list-group-item list-group-item-action"><strong>Domain :</strong> {this.state.event.domain}</button>
+  <button type="button" className="list-group-item list-group-item-action"><strong>Price : </strong>{this.state.event.price}</button>
+  <button type="button" className="list-group-item list-group-item-action"><strong>Location : </strong>{this.state.event.location}</button>
+  <button type="button" className="list-group-item list-group-item-action"><strong>Start Date : </strong>{this.state.event.startDate}</button>
+  <button type="button" className="list-group-item list-group-item-action"><strong>End Date : </strong>{this.state.event.endDate}</button>
+  <button type="button" className="list-group-item list-group-item-action"><strong>Organizer Name : </strong>{this.state.event.organizerName}</button>
   <br />
   <br />
 
@@ -73,7 +73,7 @@ export default class EventDetail extends Component {
 
   </div>
 
-      <div class="card-body">
+      <div className="card-body">
           <Link
             to={`/event-edit/${this.state.event._id}`}
             className="btn btn-warning btn-lg btn-block"
@@ -99,8 +99,8 @@ export default class EventDetail extends Component {
           &nbsp; &nbsp;
         </div>
 
-        <div class="container-fluid">
-    <div class="map-responsive">
+        <div className="container-fluid">
+    <div className="map-responsive">
 
     
 
