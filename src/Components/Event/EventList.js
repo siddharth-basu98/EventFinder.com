@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { RegionDropdown } from "react-country-region-selector";
 import img_src from "../../Images/Event-placeholder-image.png" ; 
 import { getToken } from "../../Utils/Common"
-
+import Header from "../Header"
 
 export default class EventList extends Component {
   constructor(props) {
@@ -91,7 +91,6 @@ export default class EventList extends Component {
 
 
   render() {
-    console.log(this.state);
     let search_form = ""
 
 
@@ -127,9 +126,13 @@ export default class EventList extends Component {
 
 
     return (
+
+      <div className="container-fluid">
+        <Header />
+
       <div className="container" style={{marginBottom:100}}>
 
-        <h1 className="display-3">Events</h1>
+        <h1 style={{fontSize:100, paddingTop:15}}>Events</h1>
         <br />
         <Link
           to="/event-add"
@@ -243,6 +246,7 @@ export default class EventList extends Component {
 
       </div>
       </div>
+              </div>
               </div>
     );
   }

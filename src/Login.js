@@ -42,6 +42,8 @@ class Login extends React.Component {
     console.log(this.state) ; 
 
     return (
+<div className="container-fluid">
+  <Header />
       <div className="container" id="sign_body">
     <form class="form-signin">
       <img class="center-image" src={img_src} alt="" />
@@ -68,6 +70,7 @@ class Login extends React.Component {
         </button>
       <p class="mt-5 mb-3 text-muted">&copy; 2020-2021</p>
     </form>
+      </div>
       </div>
     )
   }

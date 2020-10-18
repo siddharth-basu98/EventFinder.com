@@ -3,6 +3,7 @@ import axios from 'axios' ;
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { RegionDropdown } from "react-country-region-selector";
+import Header from "../Header";
 
 export default class EventEdit extends Component {
   constructor(props) {
@@ -190,6 +191,8 @@ export default class EventEdit extends Component {
     console.log(this.state);
 
     return (
+      <div className="container-fluid">
+        <Header />
       <div className="container">
         <h1 className="display-3">Update Event</h1>
         <p className="lead" style={{ fontSize: 15 }}>
@@ -361,6 +364,7 @@ export default class EventEdit extends Component {
             </Link>
           </div>
         </form>
+      </div>
       </div>
     );
   }

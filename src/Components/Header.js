@@ -22,26 +22,32 @@ export default class Header extends Component {
   }
 
   render() {
+
+
     return (
       <nav className="navbar navbar-expand-md navbar-inverse bg-dark display-5" style={{marginBottom:0}}>
         <div className="container-fluid">
-          <ul className=" nav navbar-nav mr-auto">
-            <li className="nav-item" style={{ fontSize: 15 }}>
+          <ul className="nav navbar-nav">
+            <li className="nav-item" style={{ fontSize: 20, color:"white" }}>
               <Link to="/">Application</Link>
             </li>
 
-            <li className="nav-item" style={{ fontSize: 15 }}>
+            <li className="nav-item" style={{ fontSize: 20 }}>
               <Link to="/">Home</Link>
             </li>
-            <li className="nav-item" style={{ fontSize: 15 }}>
+            <li className="nav-item" style={{ fontSize: 20 }}>
               <Link to="/events">Events</Link>
             </li>
-            <li className="nav-item" style={{ fontSize: 15 }}>
+
+
+            {
+              (getUser()==null) ? (<li className="nav-item" style={{ fontSize: 20 }}>
+              <Link to="/login">Login</Link>
+             </li> ) : (<li className="nav-item" style={{ fontSize: 20 }}>
               <Link to="/" onClick={this.handleLogout}>Logout</Link>
-            </li> 
-            <li className="nav-item" style={{ fontSize: 15 }}>
-             <Link to="/login">Login</Link>
-            </li> 
+            </li>  )
+            }
+
           </ul>
         </div>
       </nav>

@@ -2,6 +2,7 @@ import Axios from "axios";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { RegionDropdown } from "react-country-region-selector";
+import Header from "../Header";
 
 export default class EventAdd extends Component {
   constructor(props) {
@@ -171,6 +172,10 @@ export default class EventAdd extends Component {
     console.log(this.state);
 
     return (
+
+      <div className="container-fluid">
+        <Header />
+
       <div className="container" style={{marginBottom:100}}>
         <h1 className="display-3">Add Event</h1>
         <p className="lead" style={{ fontSize: 15 }}>
@@ -339,6 +344,7 @@ export default class EventAdd extends Component {
             </Link>
           </div>
         </form>
+      </div>
       </div>
     );
   }

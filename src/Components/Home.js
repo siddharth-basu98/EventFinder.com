@@ -5,12 +5,16 @@ import img_src3 from "../Images/carousel-3.jpg"
 
 
 import {Link} from "react-router-dom"
+import Header from "./Header";
 
 export default class Home extends Component {
   render() {
     return (
 
+
       <div className="container-fluid">
+              <Header />
+
       <main role="main">
 
       <div class="jumbotron">
@@ -20,6 +24,8 @@ export default class Home extends Component {
           <p><a class="btn btn-primary btn-lg" style={{padding:30}} href="/login" role="button" style={{fontSize:20}}>Sign In &raquo;</a></p>
         </div>
       </div>
+
+      <br />
 
          <div id="myCarousel" class="carousel slide" data-ride="carousel" style={{marginLeft:0}}>
      <ol class="carousel-indicators">
@@ -79,7 +85,7 @@ export default class Home extends Component {
      </a>
    </div>
 
-      <div class="container" style={{marginTop:30, fontSize:15}}>
+      <div class="container" style={{marginTop:100, fontSize:15}}>
         <div class="row">
           <div class="col-md-4">
             <h2>Search Events</h2>

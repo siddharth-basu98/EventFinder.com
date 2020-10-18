@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import img_src from "../../Images/nature-design.jpg" ; 
+import Header from "../Header";
 
 
 export default class EventDetail extends Component {
@@ -39,6 +40,9 @@ export default class EventDetail extends Component {
   render() {
   
     return (
+
+      <div className="container-fluid">
+        <Header />
 
       <div className="container">
 <div class="card mb-3">
@@ -105,6 +109,7 @@ export default class EventDetail extends Component {
 </div>
   
 </div>
+      </div>
       </div>
 
     );
