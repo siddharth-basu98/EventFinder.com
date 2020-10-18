@@ -18,17 +18,17 @@ Admin username and password (to be entered on the login page)
 
 ## How to run the app
 
-Step 1: Clone the project. 
-Step 2: (Activating Express APIs and MondoDB database) -> Using any IDE of choice, open the cloned project in the workspace. MongoDB needs to be installed for the user and it is from where the backend is connected and the APIs manipulate. After doing that run “cd BackEnd_Express_Mongo_server” and run “npm install” and then  “npm start”. This starts the backend server which starts listening to port 4000 where the react app sends its request to.
-Step 3: (Starting the React Development Server) -> On the root directory of the application, just run the command “npm install” and then“npm start”, it automatically starts the react development server on port 3000 which is default. 
-Step 4: (Load initial data for protype demo) -> The home page is what opens upon starting the react project. On the home page navigation bar, there is an option to “Load initial data (For prototype demo purposes)”
-Step 5: The app majorly as required were to perform admin related tasks, so to access the functionalities of the application it sends you to a login page when you click to access the login page, the user saved as of now is “admin” and “admin” with the name “siddharth”. SO on the login page enter the following username and password, 
+- Step 1: Clone the project. 
+- Step 2: (Activating Express APIs and MondoDB database) -> Using any IDE of choice, open the cloned project in the workspace. MongoDB needs to be installed for the user and it is from where the backend is connected and the APIs manipulate. After doing that run “cd BackEnd_Express_Mongo_server” and run “npm install” and then  “npm start”. This starts the backend server which starts listening to port 4000 where the react app sends its request to.
+- Step 3: (Starting the React Development Server) -> On the root directory of the application, just run the command “npm install” and then“npm start”, it automatically starts the react development server on port 3000 which is default. 
+- Step 4: (Load initial data for protype demo) -> The home page is what opens upon starting the react project. On the home page navigation bar, there is an option to “Load initial data (For prototype demo purposes)”
+- Step 5: The app majorly as required were to perform admin related tasks, so to access the functionalities of the application it sends you to a login page when you click to access the login page, the user saved as of now is “admin” and “admin” with the name “siddharth”. SO on the login page enter the following username and password, 
 {
 	“username”:”admin”
 	“password”:”admin”
 }
 
-Step 6: Enjoy all the functionalities of the app from here on. 
+- Step 6: Enjoy all the functionalities of the app from here on. 
 
 
 ## Some key concepts used in the Application
