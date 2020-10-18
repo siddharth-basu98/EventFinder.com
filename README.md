@@ -30,9 +30,11 @@ Admin username and password (to be entered on the login page)
 
 - Step 6: Enjoy all the functionalities of the app from here on. 
 
+_
+_
 
 
-![alt-text](https://github.com/siddharth-basu98/EventFinder.com/blob/master/login_gif.gif)
+![alt-text](https://github.com/siddharth-basu98/EventFinder.com/blob/master/gifs/app_gif.gif)
 
 
 
@@ -49,7 +51,13 @@ Admin username and password (to be entered on the login page)
 - ES6 JavaScript features
 - React Router
 - Google Maps API for showing event location map
+
+
  
+_
+_
+
+![alt-text](https://github.com/siddharth-basu98/EventFinder.com/blob/master/gifs/functionality_gif.gif)
 
 
 
