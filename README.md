@@ -31,6 +31,12 @@ Admin username and password (to be entered on the login page)
 - Step 6: Enjoy all the functionalities of the app from here on. 
 
 
+
+![alt-text](https://github.com/siddharth-basu98/EventFinder.com/blob/master/login_gif.gif)
+
+
+
+
 ## Some key concepts used in the Application
 
 - React states and classful components
