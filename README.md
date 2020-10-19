@@ -10,10 +10,7 @@ FindMyEvents is aiming to digitise a product which is an online  system capable 
 
 Admin username and password (to be entered on the login page)
 
-{
-	“username”:”admin”
-	“password”:”admin”
-}
+#### { “username”:”admin” and “password”:”admin”}
 
 
 ## How to run the app
